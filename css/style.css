@@ -1,0 +1,130 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+@font-face {
+  font-family: 'adonais';
+  src: url('../font/Adonais.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  background: url('../img/wood.png') no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+}
+h1 {
+  font-family: 'adonais', sans-serif;
+  font-size: 5rem;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+h1.comingsoon {
+  position: relative;
+  top: -300px;
+  transition: top 0.7s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  -webkit-transition: top 0.7s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  -moz-transition: top 0.7s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+h1.address {
+  opacity:  0;
+  transition: opacity 1.5s ease-in;
+  -webkit-transition: opacity 1.5s ease-in;
+  -moz-transition: opacity 1.5s ease-in;
+}
+svg {
+  width: 50%;
+  height: 100%;
+  fill: #fff;
+  fill-opacity: 0;
+  -webkit-transition: fill-opacity 1s;
+  -moz-transition: fill-opacity 1s;
+  transition: fill-opacity 1s;
+  -webkit-filter: drop-shadow( 0px 2px 5px rgba(0,0,0,0.5) );
+  filter: drop-shadow( 0px 2px 5px rgba(0,0,0,0.5) );
+}
+svg path {
+  fill: #fff;
+  fill-opacity: 0;
+  -webkit-transition: fill-opacity 1s;
+  -moz-transition: fill-opacity 1s;
+  transition: fill-opacity 1s;
+}
+svg.done, svg.done path {
+  fill-opacity: 1;
+}
+path#“wreath”,
+path#path17799_1_ {
+  stroke: #fff;
+}
+.social {
+  background: rgba(0,0,0,0.25);
+  padding: 20px 0;
+  position: relative;
+  bottom: -500px;
+  transition: bottom 0.5s;
+  -webkit-transition: bottom 0.5s;
+  -moz-transition: bottom 0.5s;
+}
+.social h2.connect {
+  color: #fff;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.social h2.connect:after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: rgba(255,255,255,0.5);
+  width: 30%;
+  margin: 10px auto 0;
+}
+.social .icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.social .icons > div {
+  margin: 0 30px;
+}
+.social .instagram svg, 
+.social .facebook svg {
+  fill-opacity: 1;
+  width: 70px;
+}
+
+.social .instagram svg path, 
+.social .facebook svg path {
+  fill-opacity: 1;
+  transition: fill 0.1s ease-in-out;
+}
+
+.social .facebook svg:hover path {
+   fill: #3B5998;
+}
+
+.social .instagram svg:hover path {
+   fill: #E4405F;
+}
+
+
+@media only screen and (max-width:700px) {
+  svg {
+    width: 100%;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+}
