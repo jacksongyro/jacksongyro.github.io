@@ -1,5 +1,26 @@
-const animatedObjects = document.querySelectorAll('.slide-in');
-const socialFooter = document.querySelector('.social');
+const body = document.querySelector('body');
+const animatedObjects = body.querySelectorAll('.slide-in');
+const socialFooter = body.querySelector('.social');
+const logo = body.querySelector('svg#jg');
+const walk = 20;
+
+function shadow(e) {
+  const { offsetWidth: width, offsetHeight: height } = body;
+  let { offsetX: x, offsetY: y } = e;
+
+  if (this !== e.target) {
+    x = x + e.target.offsetLeft;
+    y = y + e.target.offsetTop;
+  }
+
+  const xWalk = Math.round((x / width * walk) - (walk / 2));
+  const yWalk = Math.round((y / height * walk) - (walk / 2));
+
+  logo.style.filter = `
+    drop-shadow(${xWalk}px ${yWalk}px 5px rgba(0,0,0,0.5) )
+  `;
+  console.log(xWalk, yWalk);
+}
 
 function checkSlide() {
   animatedObjects.forEach(sliderImage => {
@@ -26,6 +47,7 @@ DomReady.ready(function() {
   setTimeout(function(){
     logo.play(1, function(obj) {
       obj.el.classList.add('done');
+      body.addEventListener('mousemove', shadow);
     });
   }, 500);
 
