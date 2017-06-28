@@ -25,8 +25,6 @@ function checkSlide() {
     const isNotScrolledPast = window.scrollY < imageBottom;
     if (isHalfShown && isNotScrolledPast) {
       sliderImage.classList.add('active');
-    } else {
-      sliderImage.classList.remove('active');
     }
   });
 }
