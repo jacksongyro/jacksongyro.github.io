@@ -21,6 +21,9 @@ body {
   text-align: center;
   margin: 0;
 }
+.cs {
+  overflow: hidden;
+}
 h1 {
   font-family: 'adonais', sans-serif;
   font-size: 5rem;
@@ -68,11 +71,10 @@ path#path17799_1_ {
 .social {
   background: rgba(0,0,0,0.25);
   padding: 20px 0;
-  position: relative;
-  bottom: -500px;
-  transition: bottom 0.5s;
-  -webkit-transition: bottom 0.5s;
-  -moz-transition: bottom 0.5s;
+  min-height: 200px;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
 }
 .social h2.connect {
   color: #fff;
@@ -117,6 +119,17 @@ path#path17799_1_ {
 
 .social .instagram svg:hover path {
    fill: #E4405F;
+}
+.slide-in {
+  opacity: 0;
+  transition: all 0.5s;
+}
+.align-bottom.slide-in {
+  transform: translateY(30%) scale(0.95);
+}
+.slide-in.active {
+  opacity:  1;
+  transform:  translateY(0) scale(1);
 }
 
 
