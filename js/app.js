@@ -40,5 +40,7 @@ DomReady.ready(function() {
     document.querySelector('h1.comingsoon').style.top = '0';
     document.querySelector('h1.address').style.opacity = '1';
   }, 500);
+
+  checkSlide();
   
 });
