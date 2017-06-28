@@ -45,9 +45,9 @@ svg {
   height: 100%;
   fill: #fff;
   fill-opacity: 0;
-  -webkit-transition: fill-opacity 1s;
-  -moz-transition: fill-opacity 1s;
-  transition: fill-opacity 1s;
+  -webkit-transition: fill-opacity 1s, filter 0.15s;
+  -moz-transition: fill-opacity 1s, filter 0.15s;
+  transition: fill-opacity 1s, filter 0.15s;
   -webkit-filter: drop-shadow( 0px 2px 5px rgba(0,0,0,0.5) );
   filter: drop-shadow( 0px 2px 5px rgba(0,0,0,0.5) );
 }
