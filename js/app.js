@@ -1,4 +1,4 @@
-function debounce(func, wait = 20, immediate = true) {
+function debounce(func, wait = 10, immediate = true) {
   var timeout;
   return function() {
     var context = this, args = arguments;
@@ -26,8 +26,8 @@ function checkSlide() {
     if (isHalfShown && isNotScrolledPast) {
       sliderImage.classList.add('active');
     } else {
-          sliderImage.classList.remove('active');
-        }
+      sliderImage.classList.remove('active');
+    }
   });
 }
 
