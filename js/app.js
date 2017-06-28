@@ -19,19 +19,18 @@ function shadow(e) {
   logo.style.filter = `
     drop-shadow(${xWalk}px ${yWalk}px 5px rgba(0,0,0,0.5) )
   `;
-  console.log(xWalk, yWalk);
 }
 
 function checkSlide() {
-  animatedObjects.forEach(sliderImage => {
+  animatedObjects.forEach(sliderObj => {
     // half way through the image
-    const slideInAt = (window.scrollY + window.innerHeight) - (sliderImage.clientHeight / 2);
+    const slideInAt = (window.scrollY + window.innerHeight) - (sliderObj.clientHeight / 2);
     // bottom of the image
-    const imageBottom = sliderImage.offsetTop + sliderImage.clientHeight;
-    const isHalfShown = slideInAt > sliderImage.offsetTop;
+    const imageBottom = sliderObj.offsetTop + sliderObj.clientHeight;
+    const isHalfShown = slideInAt > sliderObj.offsetTop;
     const isNotScrolledPast = window.scrollY < imageBottom;
     if (isHalfShown && isNotScrolledPast) {
-      sliderImage.classList.add('active');
+      sliderObj.classList.add('active');
     }
     if(socialFooter.classList.contains('active')) {
       window.removeEventListener('scroll', checkSlide);
