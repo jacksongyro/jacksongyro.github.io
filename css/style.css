@@ -27,6 +27,8 @@ body {
 h1 {
   font-family: 'adonais', sans-serif;
   font-size: 5rem;
+  letter-spacing: 0.1rem;
+  padding: 0 15px;
   color: #fff;
   text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
@@ -137,5 +139,8 @@ path#path17799_1_ {
   }
   h1 {
     font-size: 3.5rem;
+  }
+  h1.address {
+    font-size: 2.5rem;
   }
 }
