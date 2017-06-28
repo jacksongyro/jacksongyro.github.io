@@ -115,9 +115,6 @@ path#path17799_1_ {
 }
 .slide-in {
   opacity: 0;
-  transition: all 0.5s;
-}
-.slide-in.align-middle {
   transition: all 1s;
   transition-delay: 0.5s;
 }

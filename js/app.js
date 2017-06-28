@@ -32,13 +32,12 @@ function checkSlide() {
 window.addEventListener('scroll', debounce(checkSlide));
 
 DomReady.ready(function() {
-  new Vivus('jg', {type: 'async', duration: 200, start: 'autostart'}, function(obj) {
-    obj.el.classList.add('done');
-  });
+  const logo = new Vivus('jg', {type: 'async', duration: 200, start: 'manual'});
 
   setTimeout(function(){
-    document.querySelector('h1.comingsoon').style.top = '0';
-    document.querySelector('h1.address').style.opacity = '1';
+    logo.play(1, function(obj) {
+      obj.el.classList.add('done');
+    });
   }, 500);
 
   checkSlide();
