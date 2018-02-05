@@ -5,12 +5,62 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
 @font-face {
   font-family: 'adonais';
   src: url('../font/Adonais.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
+
+body {
+  background: #343a40;
+}
+
+.container-fluid {
+  max-width: 1671px;
+  text-align: center;
+}
+
+.fixed-top {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.menu img {
+  width: 100%;
+  margin: 0 auto 50px;
+  box-shadow: 0 0 80px rgba(0,0,0,0.8);
+}
+
+.breakfast img {
+  width: 100%;
+  margin-bottom: 50px;
+  box-shadow: 0 0 80px rgba(0,0,0,0.8);
+}
+
+.logo svg {
+  height: 200px;
+}
+
+.logo svg path {
+  fill: white;
+}
+
+.logo-row {
+  margin-bottom: 30px;
+}
+
+.logo-row .text {
+  font-family: 'Adonais', sans-serif;
+  color: white;
+  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* 
 body {
   background: url('../img/wood.png') no-repeat;
   background-size: cover;
@@ -150,4 +200,4 @@ path#path17799_1_ {
   h1.address {
     font-size: 2.5rem;
   }
-}
+} */
