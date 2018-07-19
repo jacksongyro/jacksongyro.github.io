@@ -59,6 +59,31 @@ body {
   justify-content: center;
 }
 
+.seamless img, .grubhub img {
+  width: 150px;
+}
+
+.order-online {
+  align-items: center;
+  justify-content: center;
+  font-family: 'Adonais', sans-serif;
+  color: white;
+  font-size: 1.5em;
+  letter-spacing: 5px;
+  margin-bottom: 3rem;
+}
+
+.order-online .seamless {
+  margin: 0 20px;
+}
+
+.seamless img:hover {
+  filter: grayscale(1) contrast(2);
+}
+.grubhub img:hover {
+  filter: brightness(-2); 
+}
+
 
 /* 
 body {
